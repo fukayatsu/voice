@@ -3,8 +3,6 @@ require 'dotenv'
 require 'socket'
 require 'nokogiri'
 require 'systemu'
-require 'weather_jp'
-require 'pry'
 
 Dotenv.load
 
