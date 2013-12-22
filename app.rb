@@ -47,9 +47,13 @@ private
     return if command.to_s == ""
 
     if command == '[音声認識停止]'
-      return @voice_input_enabled = false
+      @voice_input_enabled = false
+      `say -v alex 'voice input disable'`
+      return
     elsif command == '[音声認識再開]'
-      return @voice_input_enabled = true
+      @voice_input_enabled = true
+      `say -v alex 'voice input enabled'`
+      return
     end
 
     return unless @voice_input_enabled
