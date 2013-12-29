@@ -58,6 +58,7 @@ private
 
     return unless @voice_input_enabled
     puts "#{Time.now} #{command}"
+    `say -v alex 'ok'`
     @hipchat[ENV['HIPCHAT_ROOM']].send('voice', command)
   end
 
